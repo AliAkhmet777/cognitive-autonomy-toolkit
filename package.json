@@ -1,0 +1,21 @@
+{
+  "name": "cognitive-autonomy-toolkit",
+  "private": true,
+  "version": "1.0.0",
+  "description": "An interactive toolkit that helps students decide when to use AI and when to rely on their own thinking. Social IT Project.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node scripts/test-logic.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}

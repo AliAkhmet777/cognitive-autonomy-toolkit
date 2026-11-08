@@ -1,0 +1,249 @@
+.assessment-form {
+  margin-top: 32px;
+  display: grid;
+  gap: 14px;
+}
+
+.scale-legend {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+
+.statement {
+  margin: 0;
+  min-width: 0;
+  transition: border-color 0.2s;
+}
+
+.statement.is-answered {
+  border-color: var(--purple-line);
+}
+
+.statement__text {
+  display: flex;
+  gap: 14px;
+  font-family: var(--font-serif);
+  font-size: 1.22rem;
+  line-height: 1.35;
+}
+
+.statement__text span {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: var(--purple-tint);
+  color: var(--purple);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.scale {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.scale__opt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 6px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.18s, background 0.18s;
+}
+
+.scale__opt:hover {
+  border-color: var(--line-strong);
+}
+
+.scale__opt:has(input:focus-visible) {
+  outline: 2px solid var(--purple);
+  outline-offset: 2px;
+}
+
+.scale__opt.is-selected {
+  border-color: var(--purple);
+  background: var(--purple-tint);
+}
+
+.scale__num {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.18s;
+}
+
+.scale__opt.is-selected .scale__num {
+  background: var(--purple);
+  border-color: var(--purple);
+  color: #fff;
+}
+
+.scale__label {
+  font-size: 0.75rem;
+  line-height: 1.25;
+  color: var(--ink-muted);
+}
+
+.assessment-submit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+/* Result ------------------------------------------------------------------ */
+.assessment-result {
+  margin-top: 32px;
+  display: grid;
+  gap: 20px;
+}
+
+.assessment-summary {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 32px;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+.assessment-summary .eyebrow {
+  margin-bottom: 8px;
+}
+
+.assessment-summary h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+
+.assessment-summary p {
+  margin-top: 10px;
+  color: var(--ink-soft);
+}
+
+.assessment-h3 {
+  margin-bottom: 20px;
+}
+
+.dimensions {
+  display: grid;
+  gap: 22px;
+}
+
+.dimension__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+  margin-bottom: 8px;
+}
+
+.dimension__head span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.dimension__bar {
+  height: 8px;
+  border-radius: 99px;
+  background: var(--surface-sunken);
+  overflow: hidden;
+}
+
+.dimension__bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  animation: grow 0.8s var(--ease) both;
+  transform-origin: left;
+}
+
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+.dimension p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+
+.recommendations {
+  list-style: none;
+  display: grid;
+  gap: 4px;
+}
+
+.recommendations li {
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+.recommendations li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.recommendations__area {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+
+.recommendations p {
+  color: var(--ink-soft);
+}
+
+.assessment-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+  .scale {
+    gap: 6px;
+  }
+
+  .scale__label {
+    display: none;
+  }
+
+  .assessment-summary {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 20px;
+  }
+
+  .assessment-submit .btn {
+    width: 100%;
+  }
+}

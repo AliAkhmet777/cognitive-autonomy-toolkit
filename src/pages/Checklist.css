@@ -1,0 +1,217 @@
+.checklist-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 32px;
+  align-items: start;
+}
+
+.checklist {
+  display: grid;
+  gap: 10px;
+}
+
+.check-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 18px;
+  align-items: start;
+  padding: 20px 22px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s var(--ease);
+}
+
+.check-item:hover {
+  border-color: var(--line-strong);
+}
+
+.check-item:active {
+  transform: scale(0.995);
+}
+
+.check-item:has(input:focus-visible) {
+  outline: 2px solid var(--purple);
+  outline-offset: 2px;
+}
+
+.check-item__box {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  margin-top: 1px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 7px;
+  color: transparent;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.check-item__text strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.3;
+  transition: color 0.2s;
+}
+
+.check-item__text span {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+
+.check-item__n {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--line-strong);
+  padding-top: 4px;
+}
+
+.check-item.is-checked {
+  border-color: var(--green-line);
+  background: var(--green-tint);
+}
+
+.check-item.is-checked .check-item__box {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+
+.check-item.is-checked .check-item__n {
+  color: var(--green);
+}
+
+/* Status ------------------------------------------------------------------ */
+.checklist-status {
+  position: sticky;
+  top: calc(var(--nav-height) + 20px);
+}
+
+.checklist-status__card {
+  display: grid;
+  justify-items: center;
+  gap: 22px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.checklist-status__text {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.checklist-status__badge {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--purple-tint);
+  color: var(--purple);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.checklist-status__badge.is-done {
+  background: var(--green-tint);
+  color: var(--green);
+}
+
+.checklist-status__bar {
+  width: 100%;
+  height: 6px;
+  border-radius: 99px;
+  background: var(--surface-sunken);
+  overflow: hidden;
+}
+
+.checklist-status__bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--ink);
+  transition: width 0.4s var(--ease);
+}
+
+.checklist-status__text p {
+  font-size: 0.93rem;
+  color: var(--ink-soft);
+}
+
+.checklist-status__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.checklist-note {
+  margin-top: 16px;
+  padding: 0 4px;
+  font-size: 0.86rem;
+  color: var(--ink-muted);
+}
+
+.checklist-note a {
+  color: var(--purple);
+}
+
+@media (max-width: 900px) {
+  .checklist-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* On smaller screens show progress first, pinned under the navbar. */
+  .checklist-status {
+    order: -1;
+    position: static;
+  }
+
+  .checklist-status__card {
+    grid-template-columns: auto 1fr;
+    justify-items: start;
+    text-align: left;
+  }
+
+  .checklist-status__text {
+    justify-items: start;
+  }
+
+  .checklist-status__actions {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .check-item {
+    grid-template-columns: auto 1fr;
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .check-item__n {
+    display: none;
+  }
+
+  .checklist-status__card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .checklist-status__text {
+    justify-items: center;
+  }
+
+  .checklist-status__actions {
+    justify-content: center;
+  }
+}

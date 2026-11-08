@@ -1,0 +1,136 @@
+.thinker-list {
+  margin-top: 40px;
+  display: grid;
+  gap: 24px;
+}
+
+.thinker {
+  padding: clamp(26px, 4vw, 44px);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  animation: fade-up 0.5s var(--ease) both;
+}
+
+.thinker__head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.thinker__index {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid var(--purple-line);
+  background: var(--purple-tint);
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--purple);
+}
+
+.thinker h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+
+.thinker__meta {
+  margin-top: 4px;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+
+.thinker__concept {
+  margin-top: 24px;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--purple);
+}
+
+.thinker__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 18px;
+}
+
+.thinker__label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.thinker__grid p {
+  color: var(--ink-soft);
+}
+
+.thinker__toolkit {
+  margin-top: 26px;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-sunken);
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+}
+
+.thinker__toolkit span {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+
+.synthesis {
+  margin-top: clamp(48px, 7vw, 80px);
+  padding-top: clamp(40px, 6vw, 56px);
+  border-top: 2px solid var(--ink);
+}
+
+.synthesis h2 {
+  margin-bottom: 18px;
+}
+
+.synthesis .lead + .lead {
+  margin-top: 16px;
+}
+
+.synthesis strong {
+  color: var(--ink);
+}
+
+.synthesis__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+@media (max-width: 720px) {
+  .thinker__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .thinker__head {
+    align-items: flex-start;
+  }
+
+  .thinker__index {
+    width: 46px;
+    height: 46px;
+    font-size: 1.1rem;
+  }
+}
