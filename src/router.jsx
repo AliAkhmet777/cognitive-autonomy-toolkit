@@ -10,6 +10,7 @@ export const ROUTES = [
   { path: '/assessment', label: 'Self-Assessment' },
   { path: '/checklist', label: 'Checklist' },
   { path: '/foundations', label: 'Foundations' },
+  { path: '/manifesto', label: 'Manifesto' },
 ];
 
 const readPath = () => window.location.hash.replace(/^#/, '') || '/';

@@ -8,6 +8,7 @@ import Guide from './pages/Guide.jsx';
 import Assessment from './pages/Assessment.jsx';
 import Checklist from './pages/Checklist.jsx';
 import Foundations from './pages/Foundations.jsx';
+import Manifesto from './pages/Manifesto.jsx';
 
 const PAGES = {
   '/': Home,
@@ -16,6 +17,7 @@ const PAGES = {
   '/assessment': Assessment,
   '/checklist': Checklist,
   '/foundations': Foundations,
+  '/manifesto': Manifesto,
 };
 
 function NotFound() {

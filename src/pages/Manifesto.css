@@ -1,0 +1,138 @@
+/* Prose: "Why we wrote this" / "Why together" ------------------------------ */
+.manifesto-prose {
+  display: grid;
+  gap: clamp(40px, 6vw, 64px);
+}
+
+.manifesto-block h2 {
+  margin-bottom: 18px;
+}
+
+.manifesto-block .lead + .lead {
+  margin-top: 16px;
+}
+
+/* Principles (built on the Guide .rule styles) ----------------------------- */
+.manifesto-rules {
+  list-style: none;
+}
+
+.manifesto-rule .rule__number {
+  font-size: 4.5rem;
+}
+
+.manifesto-rule h3 {
+  font-size: clamp(1.5rem, 2.8vw, 1.95rem);
+}
+
+.manifesto-rule .rule__explanation {
+  margin-top: 12px;
+}
+
+.manifesto-rule__source {
+  margin-top: 16px;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+.manifesto-rule__source strong {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--purple);
+}
+
+/* What this manifesto is not ------------------------------------------------ */
+.manifesto-not {
+  list-style: none;
+}
+
+.manifesto-not li {
+  padding-top: 20px;
+  border-top: 2px solid var(--ink);
+}
+
+.manifesto-not h3 {
+  margin-bottom: 10px;
+}
+
+.manifesto-not p {
+  color: var(--ink-soft);
+}
+
+/* Message to universities and employers ------------------------------------- */
+.manifesto-message {
+  padding: clamp(26px, 4vw, 44px);
+  border-radius: var(--radius-lg);
+  background: var(--purple-tint);
+  border: 1px solid var(--purple-line);
+}
+
+.manifesto-message h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 18px;
+}
+
+.manifesto-message__lead {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 2.2vw, 1.4rem);
+  line-height: 1.45;
+  margin-bottom: 14px;
+}
+
+.manifesto-message p:not(.manifesto-message__lead) {
+  color: var(--ink-soft);
+}
+
+/* Join us ------------------------------------------------------------------- */
+.manifesto-join {
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  text-align: center;
+  padding-top: clamp(40px, 6vw, 56px);
+  border-top: 2px solid var(--ink);
+}
+
+.manifesto-join .lead {
+  max-width: 600px;
+}
+
+.manifesto-join__note {
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+}
+
+.support-pending {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.support-pending__badge {
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px dashed var(--amber-line);
+  background: var(--amber-tint);
+  color: var(--amber);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .manifesto-rule .rule__number {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .manifesto-join .btn {
+    width: 100%;
+    white-space: normal;
+  }
+}

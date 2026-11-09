@@ -368,6 +368,29 @@
   color: var(--ink-muted);
 }
 
+/* Manifesto teaser -------------------------------------------------------- */
+.manifesto-teaser-section {
+  padding-bottom: 0;
+}
+
+.manifesto-teaser {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  padding-bottom: clamp(40px, 6vw, 56px);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.manifesto-teaser .lead {
+  margin-top: 14px;
+  max-width: 560px;
+}
+
+.manifesto-teaser__btn {
+  flex-shrink: 0;
+}
+
 /* CTA --------------------------------------------------------------------- */
 .cta {
   display: flex;
@@ -412,7 +435,8 @@
     max-width: 480px;
   }
 
-  .cta {
+  .cta,
+  .manifesto-teaser {
     flex-direction: column;
     align-items: flex-start;
   }

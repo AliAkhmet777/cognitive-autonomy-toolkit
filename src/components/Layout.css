@@ -102,7 +102,7 @@
   transform: rotate(-45deg);
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
   .navbar__toggle {
     display: block;
   }

@@ -253,6 +253,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Manifesto teaser ----------------------------------------------- */}
+      <section className="section manifesto-teaser-section" aria-labelledby="manifesto-teaser-heading">
+        <div className="container">
+          <div className="manifesto-teaser">
+            <div>
+              <span className="eyebrow">Manifesto</span>
+              <h2 id="manifesto-teaser-heading">The Cognitive Autonomy Manifesto</h2>
+              <p className="lead">
+                Tools help individuals. Change needs a community. Read our manifesto and add your voice.
+              </p>
+            </div>
+            <Button to="/manifesto" variant="secondary" size="lg" arrow className="manifesto-teaser__btn">
+              Read the Manifesto
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* CTA ------------------------------------------------------------- */}
       <section className="section">
         <div className="container">
